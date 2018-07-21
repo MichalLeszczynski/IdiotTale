@@ -16,6 +16,18 @@ const int START_HP = 100;
 const int START_MP = 0;
 
 
+class Monster
+{
+public:
+	string name;
+	int lvl;
+	int attack;
+	int hp;
+	char tex[100];
+
+	Monster(string name,int lvl,int attack,int hp,const char tex[100]);
+};
+
 
 class Character
 {
@@ -35,19 +47,17 @@ public:
 	void setWarrior();
 	void setMage();
 	void setThief();
-	void go();
+	void go(Monster*);
+	void shaker();
+	void battleOptions(Monster*);
+		void battleOptionsWarrior(Monster*);
+		void battleOptionsMage(Monster*);
+		void battleOptionsThief(Monster*);
+	void newTurn(Monster*);
+	void endTurn(Monster* monster);
+	void Attack(Monster* monster);
 };
 
-class Monster
-{
-public:
-	string name;
-	int lvl;
-	int attack;
-	int hp;
-
-	Monster(string name,int lvl,int attack,int hp);
-};
 
 int chooseMenu();
 void clean();
@@ -65,7 +75,13 @@ void tiaw();
 void seal();
 void destiny();
 void failure();
+void won();
 //anim
-void goWarrior();
-void goMage();
-void goThief();
+void goWarrior(Monster*);
+void goMage(Monster*);
+void goThief(Monster*);
+void shakerWarrior();
+void shakerMage();
+void shakerThief();
+void perish();
+void Battle(Character *player, Monster *enemy);

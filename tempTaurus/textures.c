@@ -1,5 +1,5 @@
 
-const int N = 20;
+const int N = 10;
 const char stickMage[] =
 "\
           ^\n\
@@ -59,3 +59,34 @@ const char missileThief1[] =
           |\n\
           \n\
 ";
+
+const char rat1[] = 
+"       <OOO_\n\
+";
+
+
+const char star1[] = 
+"         ***\n\
+";
+const char star2[] = 
+"          *\n\
+          ***\n\
+           *\n\
+";
+
+const char star3[] = 
+"          *\n\
+         ***\n\
+        *****\n\
+         ***\n\
+          *\n\
+";
+
+const char star4[] = 
+"         *\n\
+";
+const char nothing[] = 
+"         \n\
+";
+
+

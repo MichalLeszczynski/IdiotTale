@@ -111,17 +111,6 @@ void lost()
 	tiaw();
 }
 
-void Duel(Character *player, Monster *enemy)
-{
-	clean();
-	cout<<"LET THE BATTLE BEGIN"<<endl;
-	wait();
-	clean();
-	cout<<"To do..."<<endl;
-	tiaw();
-}
-
-
 void failure()
 {
 	cout<<"\nSomething went wrong..."<<endl;
@@ -129,4 +118,9 @@ void failure()
 				cin.clear();
 				fflush(stdin);
 				getchar();
+}
+void won()
+{
+	cout<<"You won. Good job."<<endl;
+	tiaw();
 }

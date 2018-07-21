@@ -91,19 +91,40 @@ this->defence += 2;
 this->hp += 25;
 this->mp += 10;
 }
-void Character::go()
+void Character::go(Monster *monster)
 {
 if(!strcmp(this->profession,"Warrior"))
 	{
-		goWarrior();
+		goWarrior(monster);
 	}
 	else if(!strcmp(this->profession,"Mage"))
 		{
-			goMage();
+			goMage(monster);
 		}
 		else if(!strcmp(this->profession,"Thief"))
 			{
-			goThief();
+			goThief(monster);
+			}
+			else 
+			{
+				failure();
+			}
+
+
+}
+void Character::shaker()
+{
+if(!strcmp(this->profession,"Warrior"))
+	{
+		shakerWarrior();
+	}
+	else if(!strcmp(this->profession,"Mage"))
+		{
+			shakerMage();
+		}
+		else if(!strcmp(this->profession,"Thief"))
+			{
+			shakerThief();
 			}
 			else 
 			{

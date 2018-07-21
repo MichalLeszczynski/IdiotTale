@@ -1,12 +1,11 @@
 #include "funkc.h"
-
+#include "textures.c"
 void trial(Character *player)
 {
-	player->go();
 	player->showPlayer();
 	tiaw();
 	clean();
-	cout<<"Here is written heartwarming sory about your past, and some ridiculous reason, why u have to beat some ugly guy, who told you that you are gay."<<endl<<endl;
+	cout<<"Here is written heartwarming story about your past, and some ridiculous reason, why u have to beat some ugly guy, who told you that you are gay."<<endl<<endl;
 	  tiaw();
 	  clean();
 	  Battle1(player);
@@ -19,8 +18,10 @@ void Battle1(Character *player)
 		{
 			case 1:
 			{
-				Monster *rat = new Monster("Brutal Rat",1,10,30);
+				Monster *rat = new Monster("Brutal Rat",1,10,30,rat1);
+				wait();
 				Duel(player,rat);
+				delete rat;
 				break;
 			}
 			case 2:
