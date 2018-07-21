@@ -3,7 +3,11 @@
 #include <cstdlib>
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h> // for usleep function
 using namespace std;
+
+ 
+
 
 const int START_LVL = 1;
 const int START_ATTACK = 0;
@@ -31,6 +35,7 @@ public:
 	void setWarrior();
 	void setMage();
 	void setThief();
+	void go();
 };
 
 class Monster
@@ -60,3 +65,7 @@ void tiaw();
 void seal();
 void destiny();
 void failure();
+//anim
+void goWarrior();
+void goMage();
+void goThief();

@@ -118,4 +118,15 @@ void Duel(Character *player, Monster *enemy)
 	wait();
 	clean();
 	cout<<"To do..."<<endl;
+	tiaw();
+}
+
+
+void failure()
+{
+	cout<<"\nSomething went wrong..."<<endl;
+				wait();
+				cin.clear();
+				fflush(stdin);
+				getchar();
 }

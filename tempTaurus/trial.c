@@ -2,6 +2,8 @@
 
 void trial(Character *player)
 {
+	player->go();
+	player->showPlayer();
 	tiaw();
 	clean();
 	cout<<"Here is written heartwarming sory about your past, and some ridiculous reason, why u have to beat some ugly guy, who told you that you are gay."<<endl<<endl;
@@ -75,13 +77,4 @@ void destiny()
 				tiaw();
 				clean();
 				lost();
-}
-
-void failure()
-{
-	cout<<"\nSomething went wrong..."<<endl;
-				wait();
-				cin.clear();
-				fflush(stdin);
-				getchar();
 }

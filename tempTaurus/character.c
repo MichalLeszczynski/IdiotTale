@@ -91,3 +91,24 @@ this->defence += 2;
 this->hp += 25;
 this->mp += 10;
 }
+void Character::go()
+{
+if(!strcmp(this->profession,"Warrior"))
+	{
+		goWarrior();
+	}
+	else if(!strcmp(this->profession,"Mage"))
+		{
+			goMage();
+		}
+		else if(!strcmp(this->profession,"Thief"))
+			{
+			goThief();
+			}
+			else 
+			{
+				failure();
+			}
+
+
+}
