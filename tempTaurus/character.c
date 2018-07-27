@@ -133,3 +133,52 @@ if(!strcmp(this->profession,"Warrior"))
 
 
 }
+void Character::lvlUp()
+{
+	clean();
+	cout<<"LVL UP!"<<endl;
+	tiaw();
+	switch(chooseLvl())
+	{
+			case 1:
+			{
+				this->attack+=3;
+				break;
+			}
+			case 2:
+			{	
+				this->defence+=1;
+				break;
+			}
+			case 3:
+			{
+				this->hp+=20;
+				break;
+			}	
+			case 4:
+			{
+				this->mp+=10;
+				break;
+			}	
+			default:
+			{
+				failure();
+				break;
+			}
+		}
+}
+int chooseLvl()
+{
+	clean();
+	cout<<"Choose your lvl bonus:"<<endl;
+	cout<<"1. +3 attack"<<endl;
+	cout<<"2. +1 defence"<<endl;
+	cout<<"3. +20 hp"<<endl;
+	cout<<"4. +10 mp"<<endl;
+
+	cout<<"Choose your bonus(1/2/3/4):";
+	int choice;
+	cin>> choice;
+	return choice;
+
+}

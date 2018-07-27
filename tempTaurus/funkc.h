@@ -36,7 +36,9 @@ public:
 	char profession[10];
 	int lvl;
 	int attack;
+	int tempAttack;
 	int defence;
+	int tempDefence;
 	int hp;
 	int mp;
 
@@ -56,6 +58,9 @@ public:
 	void newTurn(Monster*);
 	void endTurn(Monster* monster);
 	void Attack(Monster* monster);
+	void lvlUp();
+	void battleStats(Monster*);
+	void mageSpell(Monster*);
 };
 
 
@@ -84,4 +89,9 @@ void shakerWarrior();
 void shakerMage();
 void shakerThief();
 void perish();
+void healWarrior(Monster *);
+void healMage(Monster *);
+void healThief(Monster *);
+
 void Battle(Character *player, Monster *enemy);
+int chooseLvl();

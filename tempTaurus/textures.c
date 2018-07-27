@@ -89,4 +89,10 @@ const char nothing[] =
 "         \n\
 ";
 
+const char cross[] = 
+"          +\n\
+         +++\n\
+          +\n\
+";
+
 

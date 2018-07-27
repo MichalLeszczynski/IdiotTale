@@ -19,7 +19,7 @@ void Battle1(Character *player)
 			case 1:
 			{
 				Monster *rat = new Monster("Brutal Rat",1,10,30,rat1);
-				wait();
+				tiaw();
 				Duel(player,rat);
 				delete rat;
 				break;

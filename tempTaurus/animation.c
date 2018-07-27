@@ -20,13 +20,18 @@ for(int i=0;i<N;i++)
 	{	
 		clean();
 		printf("%s",monster->tex);
-		space(N-i);
-		printf("%s",missileWarrior1);
-		space(i);
+		space(N-i-1);
 		printf("%s",stickWarriorHandsUp);
+		space(i);
 		usleep(50000);
 	}
+	clean();
+	printf("%s",monster->tex);
+	space(N);
+	printf("%s",stickWarrior);
+	usleep(100000);
 }
+
 void goMage(Monster *monster)
 {
 		clean();
@@ -137,4 +142,94 @@ void perish()
 		clean();
 		printf("%s",nothing);
 		usleep(100000);
+}
+void Character::mageSpell(Monster *monster)
+{
+	clean();
+		printf("%s",monster->tex);
+		space(N);
+		printf("%s",stickMage);
+		usleep(50000);
+for(int i=0;i<N;i++)
+	{	
+		clean();
+		printf("%s",monster->tex);
+		space(N-i);
+		printf("%s",missileMage2);
+		space(i);
+		printf("%s",stickMageHandsUp);
+		usleep(50000);
+	}
+}
+
+void healWarrior(Monster *monster)
+{
+		clean();
+		printf("%s",monster->tex);
+		space(N);
+		printf("%s",stickWarrior);
+		usleep(100000);
+for(int i=0;i<N;i++)
+	{	
+		clean();
+		printf("%s",monster->tex);
+		space(N-1);
+		printf("%s",cross);
+		printf("%s",stickWarriorHandsUp);
+		usleep(50000);
+		clean();
+		printf("%s",monster->tex);
+		space(N-1);
+		printf("%s",cross);
+		printf("%s",stickWarrior);
+		usleep(50000);
+	}
+}
+
+void healMage(Monster *monster)
+{
+		clean();
+		printf("%s",monster->tex);
+		space(N);
+		printf("%s",stickMage);
+		usleep(100000);
+for(int i=0;i<N;i++)
+	{	
+		clean();
+		printf("%s",monster->tex);
+		space(N-1);
+		printf("%s",cross);
+		printf("%s",stickMageHandsUp);
+		usleep(50000);
+		clean();
+		printf("%s",monster->tex);
+		space(N-1);
+		printf("%s",cross);
+		printf("%s",stickMage);
+		usleep(50000);
+	}
+}
+
+void healThief(Monster *monster)
+{
+		clean();
+		printf("%s",monster->tex);
+		space(N);
+		printf("%s",stickThief);
+		usleep(100000);
+for(int i=0;i<N;i++)
+	{	
+		clean();
+		printf("%s",monster->tex);
+		space(N-1);
+		printf("%s",cross);
+		printf("%s",stickThiefHandsUp);
+		usleep(50000);
+		clean();
+		printf("%s",monster->tex);
+		space(N-1);
+		printf("%s",cross);
+		printf("%s",stickThief);
+		usleep(50000);
+	}
 }
